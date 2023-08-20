@@ -58,15 +58,17 @@
 .welcome-section{
     position: relative;
     left:10vw;
-    right:10vw;
-    top:5vh;
+    margin-top: 20vh;
     width:80vw;
+    margin-bottom: 10vh;
     margin-right: 0 !important;
 }
 
 .section-title{
     position: relative;
     display: flex;
+    align-items: center;
+    bottom: 40px;
 } 
 
 .section-title-bullet{
@@ -75,10 +77,17 @@
     width: 50px; 
     background-color: #6D98BA;
     border-radius: 50%;
-    right: 2vw; 
 }
 
 .section-title-text{
     font-size: 25px;
     color: #210203;  
+    margin-left: 2vw;
+}
+
+.section-content{
+    background-color: #6D98BA;
+    border-radius: 2%;
+    height: 400px;
+    width: 80vw;
 }
