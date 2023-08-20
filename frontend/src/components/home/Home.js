@@ -1,13 +1,15 @@
 import Welcome from "../welcome/Welcome";
 import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
+
 function Home() {
-  return (
-    <div>
-        <Navbar/>
-        <Welcome/>
-        {/* <Footer/> */}
-    </div>
-  );
+    return (
+        <>
+            <Navbar/>
+            <Welcome/>
+            <Footer/>
+        </>
+    );
 }
 
 export default Home;
