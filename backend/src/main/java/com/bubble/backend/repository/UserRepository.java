@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserRepository extends MongoRepository<User, Long> {
+public interface UserRepository extends MongoRepository<User, Integer> {
 
     List<User> findAll();
 
-    List<User> findById(long id);
+    List<User> findById(int id);
 
 }

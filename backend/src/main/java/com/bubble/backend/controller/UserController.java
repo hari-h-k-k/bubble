@@ -15,14 +15,20 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "/{id}")
-    public User getUser(@PathVariable long id) {
+    @GetMapping("/test")
+    public void test() {
+        System.out.println("test");
+    }
+
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable int id) {
         User user = userService.getUserById(id);
         return user;
     }
 
     @PostMapping("/addUser")
     public void addUser(@RequestBody User user){
+        System.out.println("Add user");
         userService.addUser(user);
     }
 

@@ -1,16 +1,18 @@
 package com.bubble.backend.model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Data
+@NoArgsConstructor
 @Document(collection = "User")
 public class User {
-    private long id;
+    private int id;
 
     private String name;
-
-    public User() {
-    }
 
     public User(int id, String name) {
         this.id = id;
@@ -21,7 +23,7 @@ public class User {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
