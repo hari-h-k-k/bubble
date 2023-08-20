@@ -2,7 +2,7 @@ import "./Welcome.css";
 import Logo from "../../assets/images/logo.png";
 function Welcome() {
     return (
-        <div className="welcome">
+        <>
             <div className="hero">
                 <img src={Logo} className="hero-logo"></img>
                 <HeroBox />
@@ -22,16 +22,7 @@ function Welcome() {
                 </div>
             </div>
 
-
-            {/* <div className="statistics">
-                aaaaaaaaaaaaaaaaaaaasssssssssssssssssdddddddddddd
-            </div>
-
-            <div className="testimonials">
-                aaaaaaaaaaaaaaaaaaaasssssssssssssssssdddddddddddd
-            </div> */}
-
-        </div>
+        </>
     );
 }
 
