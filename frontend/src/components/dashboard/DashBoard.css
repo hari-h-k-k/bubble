@@ -1,29 +1,39 @@
-.dashboard{
+.dashboard {
     background-color: #6D98BA;
     text-align: -webkit-center;
     padding-block: 40px;
     min-height: 90vh;
 }
-.dashboard-title{
-    color: aqua;
+
+.dashboard-title {
+    color: #210203;
     font-size: 80px;
     text-align: center;
 }
-.searchbar{
-    background-color: #C17767;
-    border-radius: 20%;
-    width:fit-content;
+
+.searchbar {
+    background-color: #c17767;
+    border-radius: 50px;
+    width: fit-content;
     min-width: 30vw;
-    padding: 10px;
+    padding-block: 10px;
+    padding-inline: 15px;
     font-size: 30px;
     margin-block: 20px;
 }
 
-.create-button{
+.search-inputs {
+    background-color: #c17767;
+    font-size: 30px;
+    border: none;
+    outline: none;
+}
+
+.create-button {
     background-color: #C17767;
-    border-radius: 20%;
-    cursor: pointer; 
-    width:fit-content;
+    border-radius: 50px;
+    cursor: pointer;
+    width: fit-content;
     min-width: 30vw;
     padding: 10px;
     font-size: 30px;
@@ -34,9 +44,19 @@
     background-color: #D9D9D9;
 }
 
-.bubble-cards{
-    background-color: #6D98BA;
-    border-radius: 2%;
-    min-height: 400px;
-    width: 80vw;
+.bubble-cards {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.vertical-line {
+    border-left: 1px solid black;
+    height: 100px;
+    position: relative;
 }
