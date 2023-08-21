@@ -88,6 +88,6 @@
 .section-content{
     background-color: #6D98BA;
     border-radius: 2%;
-    height: 400px;
+    min-height: 400px;
     width: 80vw;
 }

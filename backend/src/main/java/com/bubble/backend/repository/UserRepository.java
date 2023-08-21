@@ -13,4 +13,6 @@ public interface UserRepository extends MongoRepository<User, Integer> {
 
     List<User> findById(int id);
 
+//    public List<User> findAllByOrderByLastNameAsc();
+
 }

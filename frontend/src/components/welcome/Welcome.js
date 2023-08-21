@@ -4,15 +4,22 @@ import Bubbles from "../../assets/images/bubbles.png";
 import User from "../../assets/images/user.png";
 import Globe from "../../assets/images/globe.png";
 import Avatar from "../../assets/images/avatar.png";
+import SolidStar from "../../assets/images/solid-star.png";
+import HollowStar from "../../assets/images/hollow-star.png";
+import TestimonialCarousel from "../testmonial/Testimonials";
+import {useNavigate} from "react-router-dom";
 
 function Welcome() {
+    const navigate = useNavigate();
     return (
         <>
             <div className="hero">
                 <img src={Logo} className="hero-logo"></img>
                 <HeroBox />
 
-                <button className="join-button" >
+                <button className="join-button" onClick={() => {
+                    navigate('/dashboard');
+                }}>
                     Join
                 </button>
             </div>
@@ -58,6 +65,7 @@ function Welcome() {
                 </div>
                 <div className="section-content" style={{ backgroundColor: "#D3B99F", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "space-around" }}>
 
+                    {/* <TestimonialCarousel/> */}
                     <TestimonialCard/>
                     <TestimonialCard/>
                 </div>
@@ -87,11 +95,23 @@ function HeroBox() {
 
 function TestimonialCard() {
     return (
-        <div style={{ textAlign: "center", width:"450px", border:"solid", paddingBlock:"10px" }}>
-            <img src={Avatar} style={{ height: "200px", width: "200px" }}></img>
-            <div style={{ fontSize: "25px" }}>“Absolutely the best service I've ever used!
+        <div style={{ textAlign: "center", width:"450px", border:"solid", padding:"10px", borderRadius:"5%" }}>
+            
+            <div style={{ fontSize: "25px", marginBottom:"20px" }}>“Absolutely the best service I've ever used!
              It's incredibly user-friendly and impressively fast.
               The overall user experience is nothing short of fantastic”</div>
+
+            <div style={{display:"flex", justifyContent:"space-between"}}>
+                <div style={{display:"flex"}}>
+                    <img src={SolidStar} style={{height:"20px", width:"20px", marginInline:"2px"}}></img>
+                    <img src={SolidStar} style={{height:"20px", width:"20px", marginInline:"2px"}}></img>
+                    <img src={SolidStar} style={{height:"20px", width:"20px", marginInline:"2px"}}></img>
+                    <img src={SolidStar} style={{height:"20px", width:"20px", marginInline:"2px"}}></img>
+                    <img src={HollowStar} style={{height:"20px", width:"20px", marginInline:"2px"}}></img>
+                    
+                </div>
+                <img src={Avatar} style={{ height: "50px", width: "50px" }}></img>
+            </div>
         </div>
     )
 }

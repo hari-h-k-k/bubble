@@ -1,7 +1,7 @@
 package com.bubble.backend.controller;
 
 import com.bubble.backend.model.User;
-import com.bubble.backend.service.UserService;
+import com.bubble.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    UserService userService;
+    UserRepository userRepository;
 
     @GetMapping("/test")
     public void test() {
@@ -22,18 +22,19 @@ public class UserController {
 
     @GetMapping("/{id}")
     public User getUser(@PathVariable int id) {
-        User user = userService.getUserById(id);
+        User user = userRepository.findById(id).get(0);
+
         return user;
     }
 
     @PostMapping("/addUser")
     public void addUser(@RequestBody User user){
         System.out.println("Add user");
-        userService.addUser(user);
+        userRepository.save(user);
     }
 
     @GetMapping("/getAll")
     public List<User> list(){
-        return userService.getAllUsers();
+        return userRepository.findAll();
     }
 }

@@ -1,0 +1,12 @@
+.carousel-container {
+    background-color: #d3b99f;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .carousel-card {
+    width: 300px; /* Adjust the width as needed */
+  }
+  
